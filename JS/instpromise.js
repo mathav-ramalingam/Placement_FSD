@@ -12,15 +12,45 @@ postlike = async () => {
   });
 };
 
+unpostlike = async () => {
+  return new Promise((unliked) => {
+    unliked("post unliked successfully");
+  });
+};
+
+
+
+share = async () => {
+  return new Promise((shared) => {
+    shared("post shared successfully");
+  });
+};
+
+unshare = async () => {
+  return new Promise((unshared) => {
+    unshared("post unshared successfully");
+  });
+};
+
+unpost = async() => {
+  return new Promise((unpost) =>
+  {
+    unpost("unpost successfully")
+  })
+}
 
 createpost = async () => {
     var post = new Promise((cpost) => {
       cpost("created successfully");
     });
-    var [posts, comments, likes] = await Promise.all([post,comment(),postlike()]);
+    var [posts, comments, likes ,unlikes, shares , unshares,unposts] = await Promise.all([post,comment(),postlike(),unpostlike(),share(),unshare(),unpost()]);
     console.log(posts);
     console.log(comments);
     console.log(likes);
+    console.log(unlikes);
+    console.log(shares);
+    console.log(unshares);
+    console.log(unposts);
   };
   createpost();
 
