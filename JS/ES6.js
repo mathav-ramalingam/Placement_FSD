@@ -71,10 +71,38 @@ console.log(z); //undefined
 var z = 10;
 console.log(z);
 
-console.log(y); //reference error
-let y = 10;
-console.log(y);
+//console.log(y); //reference error
+//let y = 10;
+//console.log(y);
+//
+//console.log(x); //reference error
+//const x = 10;
+//console.log(x);
 
-console.log(x); //reference error
-const x = 10;
-console.log(x);
+//for each
+console.log(
+  "-------------------------for each--------------------------------"
+);
+
+array = [10, 20, 50, 50, "Mathav", [10, 20.4], true];
+
+array.forEach((element, ind) => {
+  // in foreach always first paramater should be an value
+  console.log("Index is ", ind, "and element is ", element);
+});
+
+const obj = {
+  Name: "mathav",
+  "age ": 20,
+  email: "mathavra.22cse@kongu.edu",
+};
+
+for (var [key, value] of Object.entries(obj)) {
+  //The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs, which can be looped through using for...of.
+  console.log(key, ":", value);
+}
+
+Object.keys(obj).forEach((key) => {
+  //The Object.keys() method returns an array of a given object's own enumerable property names, which can then be looped through using forEach.
+  console.log(key, ":", obj[key]);
+});
