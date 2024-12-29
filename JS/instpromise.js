@@ -1,59 +1,93 @@
-
-
 comment = async () => {
-  return new Promise((commentpost) => {
-    commentpost("Comment msg posted");
+  let comment = true;
+  return new Promise((commentpost, err) => {
+    if (comment == true) {
+      commentpost("Comment posted succesfully");
+    } else {
+      err("failed to post comment");
+    }
+  });
+};
+
+uncomment = async () => {
+  let uncomment = true;
+  return new Promise((uncommentpost, err) => {
+    if (uncomment == true) {
+      uncommentpost("successfuly comment removed");
+    } else {
+      err("failed in removing the comment");
+    }
   });
 };
 
 postlike = async () => {
-  return new Promise((liked) => {
-    liked("post liked successfully");
+  let pl = true;
+  return new Promise((liked, err) => {
+    if (pl == true) {
+      liked("Post liked successfully");
+    } else {
+      err("Failed to like the post");
+    }
   });
 };
 
 unpostlike = async () => {
-  return new Promise((unliked) => {
-    unliked("post unliked successfully");
+  let upl = true;
+  return new Promise((unliked, err) => {
+    if (upl == true) {
+      unliked("Post unliked successfully");
+    } else {
+      err("Failed to unlike the post");
+    }
   });
 };
 
-
-
 share = async () => {
-  return new Promise((shared) => {
-    shared("post shared successfully");
+  let s = true;
+  return new Promise((shared, err) => {
+    if (s == true) {
+      shared("Post shared successfully");
+    } else {
+      err("Failed to share the post");
+    }
   });
 };
 
 unshare = async () => {
+  let us = true;
   return new Promise((unshared) => {
-    unshared("post unshared successfully");
+    if (us == true) {
+      unshared("Post unshared successfully");
+    } else {
+      err("Failed to unshare the post");
+    }
   });
 };
 
-unpost = async() => {
-  return new Promise((unpost) =>
-  {
-    unpost("unpost successfully")
-  })
+createpost = async () => {
+  let p = true
+  return new Promise((cpost,err) => {
+    if (p == true) {
+      cpost("Post created successfully");
+    } else {
+      err("Failed to create the post");
+    }
+  });
+};
+
+
+managepost = async() => {
+ 
+  const result  = await Promise.all([createpost(),comment(),uncomment(),postlike(),unpostlike(),share(),unshare()])
+  return result
 }
 
-createpost = async () => {
-    var post = new Promise((cpost) => {
-      cpost("created successfully");
-    });
-    var [posts, comments, likes ,unlikes, shares , unshares,unposts] = await Promise.all([post,comment(),postlike(),unpostlike(),share(),unshare(),unpost()]);
-    console.log(posts);
-    console.log(comments);
-    console.log(likes);
-    console.log(unlikes);
-    console.log(shares);
-    console.log(unshares);
-    console.log(unposts);
-  };
-  createpost();
+managepost()
+.then((result) =>
+{
+  result.forEach(element => {console.log(element); });
+})
+.catch((error) =>{
+  console.error("An error occurred:", error);
+})
 
-
-
-//Task  implement share ,unshare,unpost,unliked,uncomment
