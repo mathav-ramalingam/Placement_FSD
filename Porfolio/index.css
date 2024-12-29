@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+
+.navi
+{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: space-between; 
+    padding: 8px 25px;
+    margin: 0 100px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+ul,a{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    gap: 3rem;
+}
