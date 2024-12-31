@@ -11,6 +11,7 @@ export const EgState = () => {
   function change()
   {
     let v = Math.floor(Math.random() * arr.length);
+    console.log(Math.random())
     setchange(arr[v])
   }
 
