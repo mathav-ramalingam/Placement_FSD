@@ -5,6 +5,10 @@ import { EgState } from './components/EgState'
 import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import { Footer } from './components/Footer'
+import { Usestate } from './components/Usestate'
+import { Egaxios } from './components/Egaxios'
+import { Useref } from './components/Useref'
+import { UseContext } from './components/UseContext'
 
 
 function App() {
@@ -15,6 +19,9 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/egstate' element={<EgState />} />
+      <Route path='/Usestate' element={<Usestate/>}/>
+      <Route path='Egaxios' element={<Egaxios />} />
+      <Route path='useref' element={<UseContext />} />
     </Routes>
     <Footer/>
     </BrowserRouter>

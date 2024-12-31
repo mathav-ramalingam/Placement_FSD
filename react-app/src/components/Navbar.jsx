@@ -13,14 +13,13 @@ export const Navbar = (props) => {
             <ul >
                 <li><Link to="/" className='rtd'>Home</Link></li>
                 <li><Link to="/egstate" className='rtd'>About</Link></li>
-                <li><Link to="/" className='rtd'>Project</Link></li>
-                <li><Link to="/" className='rtd'>Certification</Link></li>
-                <li><Link to="/" className='rtd'>Contact</Link></li>
+                <li><Link to="/Usestate" className='rtd'>Project</Link></li>
+                <li><Link to="/Egaxios" className='rtd'>Certification</Link></li>
+                <li><Link to="useref" className='rtd'>Contact</Link></li>
                 
             </ul>
         </div>
     </div>
     </>
-    
   )
 }
