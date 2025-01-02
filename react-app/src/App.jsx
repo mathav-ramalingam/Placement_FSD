@@ -9,6 +9,7 @@ import { Usestate } from './components/Usestate'
 import { Egaxios } from './components/Egaxios'
 import { Useref } from './components/Useref'
 import { UseContext } from './components/UseContext'
+import { UseMemo } from './components/UseMemo'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       <Route path='/egstate' element={<EgState />} />
       <Route path='/Usestate' element={<Usestate/>}/>
       <Route path='Egaxios' element={<Egaxios />} />
-      <Route path='useref' element={<UseContext />} />
+      <Route path='useref' element={<UseMemo />} />
     </Routes>
     <Footer/>
     </BrowserRouter>

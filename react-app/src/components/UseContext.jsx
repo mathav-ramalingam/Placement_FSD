@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import { Component2 } from "./ContextComponents/component2";
+import { Component2 } from "./ContextComponents/Component2";
 
 
 export var ThemeProvider = React.createContext();
