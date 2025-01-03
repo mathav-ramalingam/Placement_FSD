@@ -1,6 +1,7 @@
 var express = require('express')
 app = express()
-
+var path = require('path');
+const { clearScreenDown } = require('readline');
 const PORT = 3001;
 
 app.get('/',(req,res) => {
@@ -11,16 +12,16 @@ app.get('/js',(req,res) => {
     res.json({server : "welcome" , url:"localhost" , port:3001})
 })
 
-app.get('/static',(req,res) =>
+app.get('/page1',(req,res) =>
 {
-    res.sendFile('D:/WORKSPACE/placement_FSD/Backend/public/index.html')
+    console.log(path.join(__dirname,'/public/index.html'));
+    res.sendFile(path.join(__dirname,'/public/index.html'))
 })
 
-app.get('/page',(req,res)=>
+app.get('/page2',(req,res)=>
 {
-    res.sendFile('D:/WORKSPACE/placement_FSD/Backend/public/new.html')
+    res.sendFile(path.join(__dirname,'/public/new.html'))
 })
-
 
 
 
