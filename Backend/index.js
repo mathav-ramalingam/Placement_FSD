@@ -1,5 +1,6 @@
 var express = require("express");
 var path = require("path");
+var cors = require('cors')
 var mongodb = require("mongoose");
 var user_schema = require("./Models/users");
 
@@ -8,7 +9,8 @@ const PORT = 5001;
 app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors())
+  
 mongodb
   .connect("mongodb://localhost:27017/KEC")
   .then(() => {
@@ -72,14 +74,14 @@ app.post("/login", async (req, res) => {
     if (existinguser) {
       if (existinguser.password != password) {
         console.log("Invalid Credentials");
-        res.send("Invalid Credentials");
+        res.status(404).send("Invalid Credentials");
       } else {
         console.log("Login Succesful");
-        res.status(200).json({ message: "Login Succesful", login: true });
+        res.status(200).json({ message: "Login Succesful", login: true , username:existinguser.firstName});
       }
     } else {
       console.log("No UserId is Found , Create an Accound");
-      res.send("No UserId is Found , Create an Accound");
+      res.status(404).send("No UserId is Found , Create an Accound");
     }
   } catch (err) {
     console.log(err);

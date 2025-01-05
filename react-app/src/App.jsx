@@ -10,6 +10,8 @@ import { Egaxios } from './components/Egaxios'
 import { Useref } from './components/Useref'
 import { UseContext } from './components/UseContext'
 import { UseMemo } from './components/UseMemo'
+import { Login } from './components/auth/Login'
+import { Register } from './components/auth/Register'
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
       <Route path='/Usestate' element={<Usestate/>}/>
       <Route path='Egaxios' element={<Egaxios />} />
       <Route path='useref' element={<UseMemo />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
     </Routes>
     <Footer/>
     </BrowserRouter>
