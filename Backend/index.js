@@ -3,6 +3,7 @@ var path = require("path");
 var cors = require('cors')
 var mongodb = require("mongoose");
 var user_schema = require("./Models/users");
+var env = require('dotenv').config()
 
 const PORT = 5001;
 
@@ -12,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors())
   
 mongodb
-  .connect("mongodb://localhost:27017/KEC")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("MongoDB Connection Successful");
   })
