@@ -58,6 +58,7 @@ export const Register = () => {
 
 
         <button onClick={handlesubmit} className='p-1 border-4 mb-16 mt-7 text-white bg-black'>submit</button>
+        <a href="/" className='p-1 border-4 mb-16 mt-7 text-white bg-black'>LOGIN</a>
     </form>
     </div>
     </>

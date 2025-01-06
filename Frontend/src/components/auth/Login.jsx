@@ -58,8 +58,14 @@ export const Login = () => {
             onClick={handlelogin}
             className="p-1 border-4 mb-16 mt-7 text-white bg-black"
           >
-            submit
+            Login
           </button>
+          <a 
+            href='/register'
+            className="p-1 border-4 mb-16 mt-7 text-white bg-black"
+          >
+            Signup
+          </a>
         </form>
       </div>
     </>
