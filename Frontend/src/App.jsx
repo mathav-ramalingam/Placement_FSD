@@ -1,17 +1,17 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import EgState from "./components/EgState";
+import { Navbar } from "./components/Navbar";
+import {Home }from "./components/Home";
+import {EgState} from "./components/EgState";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
-import Usestate from "./components/Usestate";
-import Egaxios from "./components/Egaxios";
-import Useref from "./components/Useref";
-import UseContext from "./components/UseContext";
-import UseMemo from "./components/UseMemo";
-import Login from "./components/auth/Login";
-import Register from "./components/auth/Register";
+import {Footer} from "./components/Footer";
+import {Usestate} from "./components/Usestate";
+import {Egaxios} from "./components/Egaxios";
+import {Useref} from "./components/Useref";
+import {UseContext} from "./components/UseContext";
+import {UseMemo} from "./components/UseMemo";
+import {Login }from "./components/auth/Login";
+import {Register} from "./components/auth/Register";
 
 function App() {
   return (
