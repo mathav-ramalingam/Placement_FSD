@@ -21,7 +21,7 @@ export const Register = () => {
       if(res.status === 200)
       {
         alert("Regster successfully")
-        navigate('/login')
+        navigate('/')
       }
       else{
         alert("register Failed")

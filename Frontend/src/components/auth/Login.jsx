@@ -18,7 +18,7 @@ export const Login = () => {
       if (res.status === 200) {
         alert("Login Successful");
         localStorage.setItem("username", res.data.username);
-        navigate("/");
+        navigate("/navbar");
       } else {
         console.log("Login failed");
       }
